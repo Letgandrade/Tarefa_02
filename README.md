@@ -1,51 +1,50 @@
-Simulação de Semáforo com Raspberry Pi Pico W
+# Atividade 2: Temporizador de um Disparo (One Shot)
 
-Este projeto implementa um semáforo utilizando a placa Raspberry Pi Pico W, simulando o funcionamento de um semáforo real com três LEDs (vermelho, amarelo e verde). A mudança de estado ocorre a cada 3 segundos, utilizando a função add_repeating_timer_ms() da biblioteca Pico SDK.
+## Descrição
+Este projeto utiliza a função `add_alarm_in_ms()` do **Pico SDK** para criar um sistema de temporização que controla o acionamento de LEDs a partir do clique em um **botão (pushbutton)**. Os LEDs acendem de forma sequencial após a pressão do botão, com temporização de **3 segundos** entre as transições.
 
-📌 Objetivos
+## Componentes Utilizados
+- **Microcontrolador:** Raspberry Pi Pico W
+- **LEDs:** 3 LEDs (Azul, Vermelho e Verde)
+- **Resistores:** 3 resistores de 330 Ω
+- **Botão (Pushbutton)**
 
-Simular um semáforo com LEDs e resistores.
+## Requisitos
+1. **Acionamento sequencial dos LEDs:**
+   - Ao pressionar o botão, todos os LEDs são ligados.
+   - Após 3 segundos, apenas dois LEDs permanecem ligados.
+   - Após mais 3 segundos, apenas um LED permanece ligado.
+   - Finalmente, todos os LEDs são desligados.
 
-Alternar os LEDs seguindo a sequência: Vermelho → Amarelo → Verde.
+2. **Controle de temporização:**
+   - A função `add_alarm_in_ms()` é utilizada para definir um atraso de **3 segundos** entre cada estado dos LEDs.
 
-Utilizar um temporizador periódico para alternar os estados a cada 3 segundos.
+3. **Callback para controle dos LEDs:**
+   - O estado dos LEDs é modificado dentro das **funções de call-back** do temporizador, como `turn_off_callback()`.
 
-Exibir mensagens na porta serial a cada 1 segundo.
+4. **Prevenção de ativação prematura:**
+   - O botão **não pode iniciar uma nova sequência de LEDs enquanto a anterior não tiver finalizado**.
 
-Testar o código com o LED RGB nos GPIOs 11, 12 e 13 utilizando o BitDogLab.
+5. **Teste na Ferramenta Educacional BitDogLab:**
+   - O experimento deve ser testado utilizando:
+     - **LED RGB nos GPIOs 11, 12 e 13**
+     - **Botão A no GPIO 05**
 
-🔧 Componentes Utilizados
+6. **(Opcional) Implementação de Software Debounce:**
+   - Criar uma rotina para evitar o efeito bouncing no botão.
 
-🖥️ Microcontrolador: Raspberry Pi Pico W
+## Configuração e Execução
+1. Conectar os componentes de acordo com a simulação proposta.
+2. Subir o código no Raspberry Pi Pico W.
+3. Testar a resposta dos LEDs pressionando o botão.
+4. Ajustar os tempos de atraso se necessário.
 
-💡 LEDs: 3 LEDs (Vermelho, Amarelo e Verde)
+## Simulação no Wokwi
+Para visualizar a simulação sugerida, acesse o link abaixo:
+[Ver simulação](https://www.dropbox.com/scl/fi/7faa7ib6bjrxncr2dxnf7/2025-01-26-14-01-54.mkv?rlkey=wqvef7zpxpuwvz2joj6qucasd&dl=0)
 
-🔌 Resistores: 3 resistores de 330Ω
+---
+**Autor:** Leticia Galvao Andrade 
+**Data:** 2025
 
-📜 Fluxo de Funcionamento
 
-O código inicia com o LED vermelho ligado.
-
-A cada 3 segundos, o estado do semáforo muda na seguinte ordem:
-
-🔴 Vermelho → 🟡 Amarelo → 🟢 Verde
-
-A função repeating_timer_callback() controla a mudança dos LEDs.
-
-A cada 1 segundo, uma mensagem é exibida via porta serial.
-
-O experimento também pode ser testado com um LED RGB nos GPIOs 11, 12 e 13.
-
-🚀 Execução no Wokwi
-
-Acesse o Wokwi e configure a simulação conforme a Figura 2 do enunciado.
-
-Utilize os GPIOs 13 (vermelho), 12 (amarelo) e 11 (verde).
-
-Compile e execute o código.
-
-Verifique as mensagens enviadas via porta serial.
-
-Autor
-
-Projeto desenvolvido por Letícia Andrade no contexto da disciplina de Sistemas Embarcados. 🚀
