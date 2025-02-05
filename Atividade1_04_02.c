@@ -30,6 +30,6 @@ int main() {
     add_repeating_timer_ms(3000, traffic_light_timer_callback, NULL, &timer);
     
     while (1) {
-        tight_loop_contents();
+        tight_loop_contents()
     }
 }
