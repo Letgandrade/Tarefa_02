@@ -39,11 +39,8 @@ Este projeto utiliza a função `add_alarm_in_ms()` do **Pico SDK** para criar u
 3. Testar a resposta dos LEDs pressionando o botão.
 4. Ajustar os tempos de atraso se necessário.
 
-## Simulação no Wokwi
-Para visualizar a simulação sugerida, acesse o link abaixo:
-[Ver simulação](https://www.dropbox.com/scl/fi/7faa7ib6bjrxncr2dxnf7/2025-01-26-14-01-54.mkv?rlkey=wqvef7zpxpuwvz2joj6qucasd&dl=0)
 
----
+
 **Autor:** Leticia Galvao Andrade 
 **Data:** 2025
 
