@@ -1,5 +1,5 @@
 {
-    "cmake.options.statusBarVisibility": "hidden",
+    "cmae.options.statusBarVisibility": "hidden",
     "cmake.options.advanced": {
         "build": {
             "statusBarVisibility": "hidden"
