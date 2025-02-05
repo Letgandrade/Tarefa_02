@@ -22,5 +22,5 @@
     [ "r3:1", "pico:GND.4", "black", [ "h-9.6", "v38.4", "h182.4", "v-115.24" ] ],
     [ "led2:A", "pico:GP12", "yellow", [ "h38.4", "v-48", "h48" ] ]
   ],
-  "dependencies" {}
+  "dependencies": {}
 }
