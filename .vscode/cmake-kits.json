@@ -1,6 +1,6 @@
 [
     {
-        "name": "Pico",
+        "nam": "Pico",
         "compilers": {
             "C": "${command:raspberry-pi-pico.getCompilerPath}",
             "CXX": "${command:raspberry-pi-pico.getCxxCompilerPath}"
