@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "lbel": "Compile Project",
+            "label": "Compile Project",
             "type": "process",
             "isBuildCommand": true,
             "command": "${userHome}/.pico-sdk/ninja/v1.12.1/ninja",
