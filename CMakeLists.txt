@@ -54,7 +54,7 @@ target_include_directories(Atividade1_04_02 PRIVATE
 )
 
 # Add any user requested libraries
-target_link_libraries(Atividade1_04_02 
+target_link_libraries(Atividade1_04_02)
         
         )
 
