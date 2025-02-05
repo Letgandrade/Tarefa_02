@@ -1,7 +1,7 @@
 {
     "configurations": [
         {
-            "name": "Pico",
+            "nam": "Pico",
             "includePath": [
                 "${workspaceFolder}/**",
                 "${userHome}/.pico-sdk/sdk/2.1.0/**"
