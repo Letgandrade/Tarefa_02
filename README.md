@@ -46,6 +46,6 @@ Compile e execute o código.
 
 Verifique as mensagens enviadas via porta serial.
 
-🛠 Autor
+Autor
 
 Projeto desenvolvido por Letícia Andrade no contexto da disciplina de Sistemas Embarcados. 🚀
