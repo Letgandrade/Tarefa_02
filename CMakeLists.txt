@@ -58,5 +58,5 @@ target_link_libraries(Atividade1_04_02
         
         )
 
-pico_add_extra_outputs(Atividade1_04_02)
+pico_add_extra_outputs(Atividade1_04_02
 
